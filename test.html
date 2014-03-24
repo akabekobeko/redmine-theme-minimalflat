@@ -133,8 +133,6 @@
                 <p><a href="" class="collapsible">Collapsible</a></p>
                 <p><a href="" class="collapsible collapsed">Collapsible - Collapsed</a></p>
 
-        </div>
-
         <div id="flash_notice" class="flash notice">Account was successfully updated.</div>
         <p class="nodata">No data to display</p>
 
@@ -168,8 +166,70 @@
             </p>
         </fieldset></form>
 
-        <h3 class="version"><a name="" href="">Readmanp version</a></h3>
-            <p class="progress-info">No issues for this version</p>
+        <h4>Tables</h4>
+            <table>
+                <thead>
+                    <tr><th><a href="" class="sort asc">Value</a></th><th><a href="" class="sort desc">Empty</a></th></tr>
+                </thead>
+                <tbody>
+                    <tr class="project idnt"><td class="name"><span>name</span></td><td></td></tr>
+                    <tr class="issue idnt"><td class="subject"><a href="">subject</a></td><td></td></tr>
+                    <tr><td><span class="expander">expander</span></td><td></td></tr>
+                    <tr class="open"><td><span class="expander">open expander</span></td><td></td></tr>
+                    <tr class="message locked"><td class="subject">message locked subject</td><td></td></tr>
+                    <tr class="message sticky"><td class="subject">message locked sticky</td><td></td></tr>
+                    <tr class="version shared"><td class="name">version shared name</td><td></td></tr>
+                </tbody>
+            </table>
+            <table class="boards a.board">
+                <tbody>
+                    <tr>
+                        <td><a href="" class="board">Comment</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="members">
+                <tbody>
+                    <tr>
+                        <td class="group">members group</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        <h4>Attachments</h4>
+
+        <div class="attachments">
+            <p>
+            <a class="icon icon-attachment" href="">test.zip</a>  
+                <span class="size">(128 KB)</span>
+                <a title="Delete" rel="nofollow" data-method="delete" data-confirm="Are you sure?" class="delete" href=""><img src="../../images/delete.png" alt="Delete"></a>
+                <span class="author">User, 04/01/2014 12:00 pm</span>
+            </p>
+        </div>
+        <div class="box">
+            <p>
+            <span id="attachments_fields"><span>
+                <input type="file" name="attachments[1][file]" class="file">
+                <input type="text" value="" placeholder="Optional description" name="attachments[1][description]" maxlength="255" class="description">
+                <a title="Delete" onclick="removeFileField(this); return false;" href="#"><img src="../../images/delete.png?1347800078" alt="Delete"></a>
+            </span></span>
+            <span class="add_attachment">
+                <a onclick="addFileField(); return false;" class="add_attachment" href="#">Add another file</a> (Maximum size: 1 MB)
+            </span>
+            </p>
+        </div>
+
+        <p class="other-formats">
+            Also available in:  
+            <span><a href="" class="pdf">PDF</a></span>
+            <span><a href="" class="html">HTML</a></span>
+            <span><a href="" class="txt">TXT</a></span>
+            <span><a href="" class="atom">Atom</a></span>
+            <span><a href="" class="csv">CSV</a></span>
+            <span><a href="" class="pdf">PDF</a></span>
+        </p><!-- .other-formats -->
+        </div><!-- .wiki-->
+        <hr>
 
     <h1>Administration</h1>
         <div id="admin-index">
@@ -191,13 +251,116 @@
                 </ul>
             </div>
         </div>
+        <hr>
+
+    <h1>Login</h1>
+        <div id="login-form">
+            <form method="post" action="" accept-charset="UTF-8">
+                <div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="" name="authenticity_token"></div>
+                <input type="hidden" value="" name="back_url">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td align="right"><label for="username">User:</label></td>
+                            <td align="left"><input type="text" tabindex="1" name="username" id="username"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label for="password">Password:</label></td>
+                            <td align="left"><input type="password" tabindex="2" name="password" id="password"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                                    <a href="">Forgot password</a>
+                            </td>
+                            <td align="right">
+                                <input type="submit" tabindex="5" value="Login »" name="login">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <br><br>
+
+        <div class="box tabular">
+            <input type="text" id="openid_url">
+        </div>
+        <hr>
+
+    <h1>Projects</h1>
+        <table class="list">
+            <thead>
+                <tr><th>Project</th><th>Publish</th><th>Created</th><th></th></tr>
+            </thead>
+            <tbody>
+                <tr class="odd project root parent ">
+                    <td class="name"><span><a href="">Root project</a></span></td>
+                    <td align="center"></td>
+                    <td align="center">2014/4/1</td>
+                    <td class="buttons">
+                      <a href="" class="icon icon-lock">Archive</a>
+                      <a href="" class="icon icon-copy">Copy</a>
+                      <a href="" class="icon icon-del">Delete</a>
+                    </td>
+                </tr>
+                <tr class="even project child leaf idnt idnt-1">
+                    <td class="name"><span><a href="">Child project 1</a></span></td>
+                    <td align="center"></td>
+                    <td align="center">2014/4/1</td>
+                    <td class="buttons">
+                      <a href="" class="icon icon-lock">Archive</a>
+                      <a href="" class="icon icon-copy">Copy</a>
+                      <a href="" class="icon icon-del">Delete</a>
+                    </td>
+                </tr>
+                <tr class="odd project child leaf idnt idnt-1">
+                    <td class="name"><span><a href="">Child project 2</a></span></td>
+                    <td align="center"></td>
+                    <td align="center">2014/4/1</td>
+                    <td class="buttons">
+                      <a href="" class="icon icon-lock">Archive</a>
+                      <a href="" class="icon icon-copy">Copy</a>
+                      <a href="" class="icon icon-del">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div id="projects-index">
+            <ul class="projects root">
+                <li class="root">
+                    <div class="root"><a class="project root parent my-project" href="">Root project</a>
+                        <div class="wiki description"><p>Project description.</p></div>
+                    </div>
+                    <ul class="projects ">
+                        <li class="child">
+                            <div class="child"><a class="project child leaf " href="">Child project 1</a>
+                                <div class="wiki description"><p>Project description.</p></div>
+                            </div>
+                        </li>
+                        <li class="child">
+                            <div class="child"><a class="project child leaf " href="">Child project 2</a>
+                                <div class="wiki description"><p>Project description.</p></div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <hr>
 
     <h1>Issues</h1>
         <div class="autoscroll">
         <table class="list issues">
             <thead>
             <tr>
-                <th class="checkbox hide-when-print"><a title="Check all/Uncheck all" onclick="toggleIssuesSelection(this); return false;" href=""><img src="../../images/toggle_check.png" alt="Toggle_check"></a></th>
+                <th class="checkbox hide-when-print"><a title="Check all/Uncheck all" onclick="toggleIssuesSelection(this); return false;" href=""><img src="../../images/toggle_check.png?1347800078" alt="Toggle_check"></a></th>
                 <th title="Sort by &quot;#&quot;"><a class="sort desc" href="">#</a></th>
                 <th title="Sort by &quot;Tracker&quot;"><a href="">Tracker</a></th>
                 <th title="Sort by &quot;Parent task&quot;"><a href="">Parent task</a></th>
@@ -212,7 +375,7 @@
             <tbody>
                 <tr class="hascontextmenu odd issue status-5 priority-4 closed created-by-me assigned-to-me" id="issue-0000">
                     <td class="checkbox hide-when-print"><input type="checkbox" value="0000" name="ids[]"></td>
-                    <td class="id"><a href="/redmine/issues/0000">0000</a></td>
+                    <td class="id"><a href="">0000</a></td>
                     <td class="tracker">Function</td>
                     <td class="parent"></td><td class="status">Closed</td>
                     <td class="subject"><a href="">Function 1</a></td>
@@ -226,7 +389,7 @@
                 </tr>
                 <tr class="hascontextmenu odd issue status-5 priority-4 closed created-by-me assigned-to-me" id="issue-0000">
                     <td class="checkbox hide-when-print"><input type="checkbox" value="0001" name="ids[]"></td>
-                    <td class="id"><a href="/redmine/issues/0001">0001</a></td>
+                    <td class="id"><a href="">0001</a></td>
                     <td class="tracker">Function</td>
                     <td class="parent"></td><td class="status">Closed</td>
                     <td class="subject"><a href="">Function 2</a></td>
@@ -241,13 +404,17 @@
             </tbody>
         </table>
         </div>
-
+        <hr>
 
     <h1>Readmap</h1>
         <div id="roadmap">
             <h3 class="version"><a name="minimalflat" href="">minimalflat</a></h3>
             <p>03/21/2014</p>
-            <table style="width: 40em;" class="progress"><tbody><tr><td style="width: 100%;" class="closed"></td></tr></tbody></table>
+            <table style="width: 40em;" class="progress">
+                <tbody>
+                    <tr><td style="width: 50%;" class="closed"></td><td style="width: 40%;" class="done"></td><td style="width: 10%;" class="todo"></td></tr>
+                </tbody>
+            </table>
             <p class="pourcent">100%</p>
             <p class="progress-info"><a href="">10 issues</a>&nbsp;(<a href="">10 closed</a>&mdash;0 open)</p>
 
@@ -276,130 +443,94 @@
                </table>
             </form>
         </div>
+        <p class="progress-info">No issues for this version</p>
+        <hr>
 
     <h1>Activity</h1>
         <div id="activity">
             <h3>03/21/2014</h3>
             <dl>
-                <dt class="issue  me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                <dt class="issue me">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                <dt class="issue-edit  me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="issue-edit">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                <dt class="issue-closed  me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="issue-closed">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                <dt class="issue-note  me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="issue-note">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                <dt class="changeset  me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="changeset">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                <dt class="news me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="news">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                <dt class="message me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="message">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                <dt class="reply me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="reply">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                 <dt class="wiki-page me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="wiki-page">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                 <dt class="attachment me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="attachment">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                 <dt class="document me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="document">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                 <dt class="project me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="project">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
-                 <dt class="time-entry me">
-                    <img width="24" height="24" title="" ssl="false" src="http://www.gravatar.com/avatar/c265a1a7dadb2713ff2262025e91d133?rating=PG&amp;size=48&amp;default=monsterid" rating="PG" default="monsterid" class="gravatar" alt="">
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
+                <dt class="time-entry">
+                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
-                    <dd>
-                        <span class="description">Implement Function 1</span>
-                        <span class="author"><a href="">User</a></span>
-                    </dd>
+                    <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
             </dl>
         </div>
+        <hr>
 
     <h1>Repository</h1>
         <h2><a href="">root</a>@ master</h2>
@@ -435,6 +566,7 @@
                 </tbody>
             </table>
             <p><a href="">View all revisions</a> | <a href="">View revisions</a></p>
+        <hr>
 
     <h1>Member &amp; Issues</h1>
         <div class="members box">
@@ -450,6 +582,25 @@
             </ul>
             <p><a href="">View all issues</a> | <a href="">Calendar</a> | <a href="">Gantt</a></p>
         </div><!-- .issues .box -->
+        <hr>
+
+    <h1>News</h1>
+        <div class="news box">
+            <h3>最新ニュース</h3>
+                <p><a href="">Project</a>: 
+                <a href="">News text.</a>
+            <a href="">All news</a>
+        </div>
+        <hr>
+
+    <h1>Recent Project</h1>
+        <div class="projects box">
+            <h3>Recent Project</h3>
+            <ul>
+                <li><a href="">Project</a> (2014/04/1 12:00)</li>
+            </ul>
+        </div>
+        <hr>
 
     <h1>Calendar</h1>
         <table class="cal">
@@ -533,6 +684,7 @@
                 </tr>
             </tbody>
         </table>
+        <hr>
 
     <h1>Gantt</h1>
         <table style="width:100%; border:0; border-collapse: collapse;">
@@ -587,16 +739,6 @@
                 </tr>
             </tbody>
         </table>
-
-    <p class="other-formats">
-        Also available in:  
-        <span><a href="" class="pdf">PDF</a></span>
-        <span><a href="" class="html">HTML</a></span>
-        <span><a href="" class="txt">TXT</a></span>
-        <span><a href="" class="atom">Atom</a></span>
-        <span><a href="" class="csv">CSV</a></span>
-        <span><a href="" class="pdf">PDF</a></span>
-    </p><!-- .other-formats -->
 
 </div><!-- #content -->
 </div><!-- #main -->
