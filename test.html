@@ -113,10 +113,6 @@
                 <p><a href="" class="new">New link</a></p>
                 <p><a href="" class="close-icon">Close link</a></p>
 
-                <pre>
-pre text
-                </pre>
-
     <h2>Icons</h2>
         <h3>icon</h3>
             <p>
@@ -181,78 +177,52 @@ pre text
             <a href="" class="icon icon-file application-x-gzip">application-x-gzip</a>
             </p>
 
-    <h2>Other</h2>
+    <h2>Syntax Highlight</h2>
 
-        <p><a href="" class="collapsible">Collapsible</a></p>
-        <p><a href="" class="collapsible collapsed">Collapsible - Collapsed</a></p>
+<pre><code class="c syntaxhl"><span class="CodeRay"><span class="preprocessor">#include</span> <span class="include">&lt;stdio.h&gt;</span>
 
-        <div class="flash notice">Account was successfully updated.</div>
-        <div class="flash error">Error!</div>
-        <div class="flash warning">Warning!</div>
-        <p class="nodata">No data to display</p>
+<span class="predefined-type">int</span> main(<span class="directive">void</span>) {
+    printf(<span class="string"><span class="delimiter">"</span><span class="content">Hello, World!</span><span class="char">\n</span><span class="delimiter">"</span></span>);
 
-        <form action=""><fieldset class="collapsible collapsed">
-            <legend onclick="toggleFieldset(this);">Settings</legend>
-            <div class="box tabular">
-                <div class="jstElements">
-                    <p>
-                    <label for="issue_start_date">Start date</label>
-                    <input type="text" value="2014-03-21" size="10" name="issue[start_date]" id="issue_start_date" class="hasDatepicker">
-                    <img class="ui-datepicker-trigger" src="../../images/calendar.png" alt="..." title="...">
-                    </p>
+    <span class="keyword">return</span> <span class="integer">0</span>;
+}
+</span></code></pre>
 
-                    <div class="help">
-                        <a >Text formatting</a>
-                    </div>
-                    <button type="button" tabindex="200" class="jstb_strong" title="Strong"><span>Strong</span></button><button type="button" tabindex="200" class="jstb_em" title="Italic"><span>Italic</span></button><button type="button" tabindex="200" class="jstb_ins" title="Underline"><span>Underline</span></button><button type="button" tabindex="200" class="jstb_del" title="Deleted"><span>Deleted</span></button><button type="button" tabindex="200" class="jstb_code" title="Inline Code"><span>Inline Code</span></button><button type="button" tabindex="200" class="jstb_h1" title="Heading 1"><span>Heading 1</span></button><button type="button" tabindex="200" class="jstb_h2" title="Heading 2"><span>Heading 2</span></button><button type="button" tabindex="200" class="jstb_h3" title="Heading 3"><span>Heading 3</span></button><span id="space2" class="jstSpacer">&nbsp;</span><button type="button" tabindex="200" class="jstb_ul" title="Unordered list"><span>Unordered list</span></button><button type="button" tabindex="200" class="jstb_ol" title="Ordered list"><span>Ordered list</span></button><span id="space3" class="jstSpacer">&nbsp;</span><button type="button" tabindex="200" class="jstb_bq" title="Quote"><span>Quote</span></button><button type="button" tabindex="200" class="jstb_unbq" title="Remove Quote"><span>Remove Quote</span></button><button type="button" tabindex="200" class="jstb_pre" title="Preformatted text"><span>Preformatted text</span></button><span id="space4" class="jstSpacer">&nbsp;</span><button type="button" tabindex="200" class="jstb_link" title="Link to a Wiki page"><span>Link to a Wiki page</span></button><button type="button" tabindex="200" class="jstb_img" title="Image"><span>Image</span></button>
-                </div>
-                <textarea rows="3" name="issue[description]" id="issue_description" cols="40" class="wiki-edit" accesskey="e"></textarea>
+<pre>
+pre text
+</pre>
 
-                <span class="search_for_watchers"><a data-remote="true" data-method="get" href="">Search for watchers to add</a></span>
+    <h2>Tables</h2>
+        <table>
+            <thead>
+                <tr><th><a href="" class="sort asc">Value</a></th><th><a href="" class="sort desc">Empty</a></th></tr>
+            </thead>
+            <tbody>
+                <tr class="project idnt"><td class="name"><span>name</span></td><td></td></tr>
+                <tr class="issue idnt"><td class="subject"><a href="">subject</a></td><td></td></tr>
+                <tr><td><span class="expander">expander</span></td><td></td></tr>
+                <tr class="open"><td><span class="expander">open expander</span></td><td></td></tr>
+                <tr class="message locked"><td class="subject">message locked subject</td><td></td></tr>
+                <tr class="message sticky"><td class="subject">message locked sticky</td><td></td></tr>
+                <tr class="version shared"><td class="name">version shared name</td><td></td></tr>
+            </tbody>
+        </table>
+        <table class="boards a.board">
+            <tbody>
+                <tr>
+                    <td><a href="" class="board">Comment</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="members">
+            <tbody>
+                <tr>
+                    <td class="group">members group</td>
+                </tr>
+            </tbody>
+        </table>
 
-                <input type="submit" value="Submit" name="commit">
-            </div>
-
-            <p>
-                <a href="" class="icon icon-checked">Apply</a>
-                <a href="" class="icon icon-reload">Clear</a>
-                <a href="" class="icon icon-save">Save</a>
-                <span class="icon icon-projects "><a href="">Project</a></span>
-            </p>
-        </fieldset></form>
-
-        <h4>Tables</h4>
-            <table>
-                <thead>
-                    <tr><th><a href="" class="sort asc">Value</a></th><th><a href="" class="sort desc">Empty</a></th></tr>
-                </thead>
-                <tbody>
-                    <tr class="project idnt"><td class="name"><span>name</span></td><td></td></tr>
-                    <tr class="issue idnt"><td class="subject"><a href="">subject</a></td><td></td></tr>
-                    <tr><td><span class="expander">expander</span></td><td></td></tr>
-                    <tr class="open"><td><span class="expander">open expander</span></td><td></td></tr>
-                    <tr class="message locked"><td class="subject">message locked subject</td><td></td></tr>
-                    <tr class="message sticky"><td class="subject">message locked sticky</td><td></td></tr>
-                    <tr class="version shared"><td class="name">version shared name</td><td></td></tr>
-                </tbody>
-            </table>
-            <table class="boards a.board">
-                <tbody>
-                    <tr>
-                        <td><a href="" class="board">Comment</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="members">
-                <tbody>
-                    <tr>
-                        <td class="group">members group</td>
-                    </tr>
-                </tbody>
-            </table>
-
-        <h4>Attachments</h4>
-
+    <h2>Attachments</h2>
         <div class="attachments">
             <p>
             <a class="icon icon-attachment" href="">test.zip</a>  
@@ -276,13 +246,52 @@ pre text
 
         <p class="other-formats">
             Also available in:  
-            <span><a href="" class="pdf">PDF</a></span>
-            <span><a href="" class="html">HTML</a></span>
-            <span><a href="" class="txt">TXT</a></span>
             <span><a href="" class="atom">Atom</a></span>
-            <span><a href="" class="csv">CSV</a></span>
+            <span><a href="" class="txt">TXT</a></span>
+            <span><a href="" class="html">HTML</a></span>
             <span><a href="" class="pdf">PDF</a></span>
-        </p><!-- .other-formats -->
+        </p>
+
+    <h2>Other</h2>
+
+        <p><a href="" class="collapsible">Collapsible</a></p>
+        <p><a href="" class="collapsible collapsed">Collapsible - Collapsed</a></p>
+
+        <div class="flash notice">Account was successfully updated.</div>
+        <div class="flash error">Error!</div>
+        <div class="flash warning">Warning!</div>
+        <p class="nodata">No data to display</p>
+
+        <form action=""><fieldset class="collapsible collapsed">
+            <legend onclick="toggleFieldset(this);">Settings</legend>
+            <div class="box tabular">
+                <div class="jstElements">
+                    <p>
+                    <label for="issue_start_date">Start date</label>
+                    <input type="text" value="2014-03-21" size="10" name="issue[start_date]" id="issue_start_date" class="hasDatepicker">
+                    <img class="ui-datepicker-trigger" src="../../images/calendar.png" alt="..." title="...">
+                    </p>
+
+                    <div class="help">
+                        <a >Text formatting</a>
+                    </div>
+                    <button type="button" tabindex="200" class="jstb_strong" title="Strong"><span>Strong</span></button><button type="button" tabindex="200" class="jstb_em" title="Italic"><span>Italic</span></button><button type="button" tabindex="200" class="jstb_ins" title="Underline"><span>Underline</span></button><button type="button" tabindex="200" class="jstb_del" title="Deleted"><span>Deleted</span></button><button type="button" tabindex="200" class="jstb_code" title="Inline Code"><span>Inline Code</span></button><button type="button" tabindex="200" class="jstb_h1" title="Heading 1"><span>Heading 1</span></button><button type="button" tabindex="200" class="jstb_h2" title="Heading 2"><span>Heading 2</span></button><button type="button" tabindex="200" class="jstb_h3" title="Heading 3"><span>Heading 3</span></button><span id="space2" class="jstSpacer">&nbsp;</span><button type="button" tabindex="200" class="jstb_ul" title="Unordered list"><span>Unordered list</span></button><button type="button" tabindex="200" class="jstb_ol" title="Ordered list"><span>Ordered list</span></button><span id="space3" class="jstSpacer">&nbsp;</span><button type="button" tabindex="200" class="jstb_bq" title="Quote"><span>Quote</span></button><button type="button" tabindex="200" class="jstb_unbq" title="Remove Quote"><span>Remove Quote</span></button><button type="button" tabindex="200" class="jstb_pre" title="Preformatted text"><span>Preformatted text</span></button><span id="space4" class="jstSpacer">&nbsp;</span><button type="button" tabindex="200" class="jstb_link" title="Link to a Wiki page"><span>Link to a Wiki page</span></button><button type="button" tabindex="200" class="jstb_img" title="Image"><span>Image</span></button><button type="button" tabindex="200" class="jstb_help" title="Help"><span>Help</span></button>
+                </div>
+                <textarea rows="3" name="issue[description]" id="issue_description" cols="40" class="wiki-edit" accesskey="e"></textarea>
+
+                <span class="search_for_watchers"><a data-remote="true" data-method="get" href="">Search for watchers to add</a></span>
+
+                <input type="submit" value="Submit" name="commit">
+            </div>
+
+            <p>
+                <a href="" class="icon icon-checked">Apply</a>
+                <a href="" class="icon icon-reload">Clear</a>
+                <a href="" class="icon icon-save">Save</a>
+                <span class="icon icon-projects "><a href="">Project</a></span>
+            </p>
+        </fieldset></form>
+
         </div><!-- .wiki-->
         <hr>
 
@@ -341,10 +350,6 @@ pre text
             </form>
         </div>
         <br><br>
-
-        <div class="box tabular">
-            <input type="text" id="openid_url">
-        </div>
         <hr>
 
     <h1>Projects</h1>
@@ -506,79 +511,79 @@ pre text
             <h3>03/21/2014</h3>
             <dl>
                 <dt class="issue me">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="issue-edit">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="issue-closed">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="issue-note">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="changeset">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="news">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="message">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="reply">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="wiki-page">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="attachment">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="document">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="project">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
                     <dd><span class="description">Implement Function 1</span><span class="author"><a href="">User</a></span></dd>
                 <dt class="time-entry">
-                    <img title="" ssl="false" src="" rating="PG" default="" class="gravatar" alt="">
+                    <img title="" ssl="false" src="http://www.gravatar.com/avatar/c1e7f6cea3230f2929a89c290989ad9e?rating=PG&size=24&default=" rating="PG" default="" class="gravatar" alt="">
                     <span class="time">10:10 pm</span>
                     <a href="">Function #0000 (Closed): Implement Function 1</a>
                 </dt>
