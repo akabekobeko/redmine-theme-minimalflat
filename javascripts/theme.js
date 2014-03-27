@@ -40,15 +40,13 @@ $( document ).ready( function() {
     addBeginIcon( ".jstb_img", "fa fa-picture-o" ); 
     addBeginIcon( ".jstb_help", "fa fa-question-circle" ); 
 
+    // a > img icons
     $( "a[onclick*='removeFileField(this);']" ).addClass( "js-replace-icon-trash" ).empty();
     $( "a[data-method='delete']" ).addClass( "js-replace-icon-trash" ).empty();
     $( "img[src*='toggle_check.png']" ).replaceWith( $( "<i>" ).addClass( "js-replace-icon-check" ) );
-
-    /*
-    $( "a[href*='edit?section=']" ).addClass( "theme-js-icon-edit-section" ).empty();
-    $( "a[href*='quoted?journal_id=']" ).addClass( "theme-js-icon-quoted-journal_id" ).empty();
-    $( "a[onclick*='journals/edit']" ).addClass( "theme-js-icon-edit-section" ).empty();
-    */
+    $( "a[href*='edit?section=']" ).addClass( "js-replace-icon-edit" ).empty();
+    $( "a[href*='quoted?journal_id=']" ).addClass( "js-replace-icon-comment" ).empty();
+    $( "a[onclick*='journals/edit']" ).addClass( "js-replace-icon-edit" ).empty();
 } );
 
 } )( jQuery );

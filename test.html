@@ -10,9 +10,6 @@
     <link href="../../stylesheets/context_menu.css" media="screen" rel="stylesheet" type="text/css" /></head>
     <script src="../../javascripts/jquery-1.8.3-ui-1.9.2-ujs-2.0.3.js" type="text/javascript"></script>
     <script src="../../javascripts/i18n/jquery.ui.datepicker-ja.js" type="text/javascript"></script>
-    <script src="../../javascripts/application.js" type="text/javascript"></script>
-    <script src="../../javascripts/select_list_move.js" type="text/javascript"></script>
-    <script src="../../javascripts/context_menu.js" type="text/javascript"></script>
 
     <!-- My settings -->
     <link href="stylesheets/application.css" rel="stylesheet" type="text/css" >
@@ -222,6 +219,46 @@ pre text
             </tbody>
         </table>
 
+    <h2>Edit wiki &amp; issue</h2>
+
+        <div title="Edit this section" class="contextual"><a href="edit?section=0000"><img src="../../images/edit.png" alt="Edit"></a></div>
+        <h3>Test Section<a class="wiki-anchor" href="">¶</a></h3>
+        <div class="wiki editable">
+            <div class="contextual"><a title="Quote" rel="nofollow" data-remote="true" data-method="post" href="quoted?journal_id=0000"><img src="../../images/comment.png" alt="Comment"></a> <a title="Edit" onclick="$.ajax({url: '/journals/edit/0000.js', type: 'get'}); return false;" href=""><img src="../../images/edit.png" alt="Edit"></a></div>
+            <p>Comment text.</p>
+        </div>
+
+        <form action=""><fieldset class="collapsible collapsed">
+            <legend onclick="toggleFieldset(this);">Settings</legend>
+            <div class="box tabular">
+                <div class="jstElements">
+                    <p>
+                    <label for="issue_start_date">Start date</label>
+                    <input type="text" value="2014-03-21" size="10" name="issue[start_date]" id="issue_start_date" class="hasDatepicker">
+                    <img class="ui-datepicker-trigger" src="../../images/calendar.png" alt="..." title="...">
+                    </p>
+
+                    <div class="help">
+                        <a >Text formatting</a>
+                    </div>
+                    <button type="button" class="jstb_strong" title="Strong"><span>Strong</span></button><button type="button" class="jstb_em" title="Italic"><span>Italic</span></button><button type="button" class="jstb_ins" title="Underline"><span>Underline</span></button><button type="button" class="jstb_del" title="Deleted"><span>Deleted</span></button><button type="button" class="jstb_code" title="Inline Code"><span>Inline Code</span></button><button type="button" class="jstb_h1" title="Heading 1"><span>Heading 1</span></button><button type="button" class="jstb_h2" title="Heading 2"><span>Heading 2</span></button><button type="button" class="jstb_h3" title="Heading 3"><span>Heading 3</span></button><span id="space2" class="jstSpacer">&nbsp;</span><button type="button" class="jstb_ul" title="Unordered list"><span>Unordered list</span></button><button type="button" class="jstb_ol" title="Ordered list"><span>Ordered list</span></button><span id="space3" class="jstSpacer">&nbsp;</span><button type="button" class="jstb_bq" title="Quote"><span>Quote</span></button><button type="button" class="jstb_unbq" title="Remove Quote"><span>Remove Quote</span></button><button type="button" class="jstb_pre" title="Preformatted text"><span>Preformatted text</span></button><span id="space4" class="jstSpacer">&nbsp;</span><button type="button" class="jstb_link" title="Link to a Wiki page"><span>Link to a Wiki page</span></button><button type="button" class="jstb_img" title="Image"><span>Image</span></button><button type="button" class="jstb_help" title="Help"><span>Help</span></button>
+                </div>
+                <textarea rows="3" name="issue[description]" id="issue_description" cols="40" class="wiki-edit" accesskey="e"></textarea>
+
+                <span class="search_for_watchers"><a data-remote="true" data-method="get" href="">Search for watchers to add</a></span>
+
+                <input type="submit" value="Submit" name="commit">
+            </div>
+
+            <div class="contextual">
+                <a href="" class="icon icon-checked">Apply</a>
+                <a href="" class="icon icon-reload">Clear</a>
+                <a href="" class="icon icon-save">Save</a>
+                <span class="icon icon-projects "><a href="">Project</a></span>
+            </div>
+            <div style="clear: both;"></div>
+        </fieldset></form>
+
     <h2>Attachments</h2>
         <div class="attachments">
             <p>
@@ -262,36 +299,6 @@ pre text
         <div class="flash warning">Warning!</div>
         <p class="nodata">No data to display</p>
 
-        <form action=""><fieldset class="collapsible collapsed">
-            <legend onclick="toggleFieldset(this);">Settings</legend>
-            <div class="box tabular">
-                <div class="jstElements">
-                    <p>
-                    <label for="issue_start_date">Start date</label>
-                    <input type="text" value="2014-03-21" size="10" name="issue[start_date]" id="issue_start_date" class="hasDatepicker">
-                    <img class="ui-datepicker-trigger" src="../../images/calendar.png" alt="..." title="...">
-                    </p>
-
-                    <div class="help">
-                        <a >Text formatting</a>
-                    </div>
-                    <button type="button" tabindex="200" class="jstb_strong" title="Strong"><span>Strong</span></button><button type="button" tabindex="200" class="jstb_em" title="Italic"><span>Italic</span></button><button type="button" tabindex="200" class="jstb_ins" title="Underline"><span>Underline</span></button><button type="button" tabindex="200" class="jstb_del" title="Deleted"><span>Deleted</span></button><button type="button" tabindex="200" class="jstb_code" title="Inline Code"><span>Inline Code</span></button><button type="button" tabindex="200" class="jstb_h1" title="Heading 1"><span>Heading 1</span></button><button type="button" tabindex="200" class="jstb_h2" title="Heading 2"><span>Heading 2</span></button><button type="button" tabindex="200" class="jstb_h3" title="Heading 3"><span>Heading 3</span></button><span id="space2" class="jstSpacer">&nbsp;</span><button type="button" tabindex="200" class="jstb_ul" title="Unordered list"><span>Unordered list</span></button><button type="button" tabindex="200" class="jstb_ol" title="Ordered list"><span>Ordered list</span></button><span id="space3" class="jstSpacer">&nbsp;</span><button type="button" tabindex="200" class="jstb_bq" title="Quote"><span>Quote</span></button><button type="button" tabindex="200" class="jstb_unbq" title="Remove Quote"><span>Remove Quote</span></button><button type="button" tabindex="200" class="jstb_pre" title="Preformatted text"><span>Preformatted text</span></button><span id="space4" class="jstSpacer">&nbsp;</span><button type="button" tabindex="200" class="jstb_link" title="Link to a Wiki page"><span>Link to a Wiki page</span></button><button type="button" tabindex="200" class="jstb_img" title="Image"><span>Image</span></button><button type="button" tabindex="200" class="jstb_help" title="Help"><span>Help</span></button>
-                </div>
-                <textarea rows="3" name="issue[description]" id="issue_description" cols="40" class="wiki-edit" accesskey="e"></textarea>
-
-                <span class="search_for_watchers"><a data-remote="true" data-method="get" href="">Search for watchers to add</a></span>
-
-                <input type="submit" value="Submit" name="commit">
-            </div>
-
-            <p>
-                <a href="" class="icon icon-checked">Apply</a>
-                <a href="" class="icon icon-reload">Clear</a>
-                <a href="" class="icon icon-save">Save</a>
-                <span class="icon icon-projects "><a href="">Project</a></span>
-            </p>
-        </fieldset></form>
-
         </div><!-- .wiki-->
         <hr>
 
@@ -326,11 +333,11 @@ pre text
                     <tbody>
                         <tr>
                             <td align="right"><label for="username">User:</label></td>
-                            <td align="left"><input type="text" tabindex="1" name="username" id="username"></td>
+                            <td align="left"><input type="text" name="username" id="username"></td>
                         </tr>
                         <tr>
                             <td align="right"><label for="password">Password:</label></td>
-                            <td align="left"><input type="password" tabindex="2" name="password" id="password"></td>
+                            <td align="left"><input type="password" name="password" id="password"></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -342,7 +349,7 @@ pre text
                                     <a href="">Forgot password</a>
                             </td>
                             <td align="right">
-                                <input type="submit" tabindex="5" value="Login »" name="login">
+                                <input type="submit" value="Login »" name="login">
                             </td>
                         </tr>
                     </tbody>
@@ -646,7 +653,7 @@ pre text
 
     <h1>News</h1>
         <div class="news box">
-            <h3>最新ニュース</h3>
+            <h3>Latest news</h3>
                 <p><a href="">Project</a>: 
                 <a href="">News text.</a>
             <a href="">All news</a>

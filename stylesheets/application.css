@@ -13,7 +13,20 @@ h4 { border: none; }
 /***** Layout *****/
 #top-menu { background: #34495e; }
 
+#top-menu .home:before { content: "\f015"; font-family: FontAwesome; color: #f1c40f; margin-left: .3em; margin-right: .3em; }
+#top-menu .my-page:before { content: "\f18c"; font-family: FontAwesome; color: #2ecc71; margin-left: .3em; margin-right: .3em; }
+#top-menu .projects:before { content: "\f01c"; font-family: FontAwesome; color: #e67e22; margin-left: .3em; margin-right: .3em; }
+#top-menu .administration:before { content: "\f013"; font-family: FontAwesome; color: #ecf0f1; margin-left: .3em; margin-right: .3em; }
+#top-menu .help:before { content: "\f059"; font-family: FontAwesome; color: #3498db; margin-left: .3em; margin-right: .3em; }
+#top-menu .my-account:before { content: "\f18c"; font-family: FontAwesome; color: #2ecc71; margin-left: .3em; margin-right: .3em; }
+#top-menu .logout:before { content: "\f08b"; font-family: FontAwesome; color: #3498db; margin-left: .3em; margin-right: .3em; }
+
+#top-menu a { font-weight: normal; }
+#loggedas a:before { content: "\f007"; font-family: FontAwesome; color: #e74c3c; margin-left: .3em; margin-right: .3em; }
+
 #header { background-color: #2980b9; }
+
+#header h1:before { content: "\f135"; font-family: FontAwesome; color: #ecf0f1; margin-left: .3em; margin-right: .3em; }
 
 #main-menu li a { font-weight: normal; }
 #main-menu li a:hover { background-color: #3498db; }
@@ -393,7 +406,6 @@ div.wiki p { line-height: 1.4em; }
 .jstb_help { background-image: none; }
 
 /***** Misc *****/
-#header h1:before { content: "\f135"; font-family: FontAwesome; color: #f1c40f; margin-left: .3em; margin-right: .3em; }
 
 a:hover { text-decoration: none; }
 
@@ -401,4 +413,6 @@ a:hover { text-decoration: none; }
 .js-replace-fa-icon { margin-right: .3em; }
 .js-replace-icon-trash:before { content: "\f014"; font-family: FontAwesome; color: #7f8c8d; margin-right: .3em; }
 .js-replace-icon-check:before { content: "\f00c"; font-family: FontAwesome; color: #1abc9c; margin-right: .3em; }
+.js-replace-icon-edit:before { content: "\f040"; font-family: FontAwesome; color: #e67e22; margin-right: .3em; }
+.js-replace-icon-comment:before { content: "\f075"; font-family: FontAwesome; color: #3498db; margin-right: .3em; }
 
