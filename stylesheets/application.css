@@ -1,6 +1,16 @@
 @import url( "../../../stylesheets/application.css" );
 @import url( "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css?ver=3.8.1" );
 
+/**
+ * minimalflat
+ *
+ * Minimal and flat design Redmine theme.
+ *
+ * @version 1.0.0
+ * @author  akabeko http://akabeko.me
+ * @license GNU GENERAL PUBLIC LICENSE Version 2
+ */
+
 body { font-size: medium; color: #34495e; letter-spacing: .08em; }
 
 h1, h2, h3, h4 { font-family: Verdana, sans-serif; font-weight: normal; padding: 0; }
