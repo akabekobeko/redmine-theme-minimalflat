@@ -3,7 +3,7 @@
 
 body { font-size: medium; color: #34495e; letter-spacing: .08em; }
 
-h1, h2, h3, h4 { font-family: Verdana, sans-serif; font-weight: normal; padding: 0; margin: 0 0 1em 0; }
+h1, h2, h3, h4 { font-family: Verdana, sans-serif; font-weight: normal; padding: 0; }
 #content h1, h2, h3, h4 { color: #34495e; }
 h2, .wiki h1 { font-size: 2.5em; }
 h3, .wiki h2 { font-size: 2em;   }
@@ -33,6 +33,7 @@ h4 { border: none; }
 #main-menu li a.selected, #main-menu li a.selected:hover { background: #fcfcfc; color: #34495e; }
 
 #admin-menu a { background: none; padding: 0; }
+#admin-menu a.selected { padding: 0 !important; }
 #admin-menu a.projects { background: none; }
 #admin-menu a.projects:before { content: "\f187"; color: #e67e22; font-family: FontAwesome; font-size: 1.2em; margin-right: .3em; }
 #admin-menu a.users { background: none; }
@@ -83,6 +84,8 @@ a.collapsible.collapsed { background: none; padding: 0; }
 a.collapsible.collapsed:before { content: "\f0dd"; color: #34495e; font-family: FontAwesome; margin-right: .3em; }
 
 a#toggle-completed-versions { color:#bdc3c7; }
+
+#sidebar a.selected { padding: 0; color: #2980b9; }
 
 /***** Tables *****/
 table.list { border: 1px solid #d0d6db; margin-bottom: 1em; }
@@ -139,6 +142,8 @@ div.projects h3:before { content: "\f187"; color: #e67e22; font-family: FontAwes
 
 span.search_for_watchers a, span.add_attachment a { background: none; padding: 0; }
 span.search_for_watchers a:before, span.add_attachment a:before { content: "\f055"; color: #2ecc71; font-family: FontAwesome; margin-right: .3em; }
+
+.box { padding: 1em; }
 
 tr span.expander { background: none; padding: 0; }
 tr span.expander:before { content: "\f0fe"; color: #34495e; font-family: FontAwesome; margin-right: .3em; }
@@ -202,6 +207,7 @@ a.atom:before { content: "\f09e"; color: #2980b9; font-family: FontAwesome; marg
 .other-formats .txt:before  { content: "\f15c"; color: #95a5a6; font-family: FontAwesome; margin-right: .3em; }
 .other-formats .html:before { content: "\f15c"; color: #16a085; font-family: FontAwesome; margin-right: .3em; }
 .other-formats .pdf:before  { content: "\f15c"; color: #c0392b; font-family: FontAwesome; margin-right: .3em; }
+.other-formats .csv:before  { content: "\f15c"; color: #e67e22; font-family: FontAwesome; margin-right: .3em; }
 
 em.info.error { background: none; padding: 0; }
 em.info.error:before { content: "\f06a"; color: #e74c3c; font-family: FontAwesome; margin-right: .3em; }
@@ -383,27 +389,23 @@ div.wiki p { line-height: 1.4em; }
 
 /***** jstoolbar *****/
 
-.jstElements button { padding: 0; color: #34495e; width: 2.5em; height: 2.5em; font-family: sans-serif; }
+.js-replace-jstElements button {
+    background: none #f7f7f7;
+    padding: 0;
+    color: #34495e;
+    width: 2.5em;
+    height: 2.5em;
+    font-family: sans-serif;
+    border: solid 1px #ddd;
+    margin-right: .5em;
+}
 
-.jstElements .help a { background-image: none; padding: 0; }
-.jstElements .help a:before { content: "\f059"; font-family: FontAwesome; color: #3498db; margin-right: .3em; font-size: 1.2em; }
+.js-replace-jstElements button:hover { background-color: #E5E5E5; border-color: #BBBBBB; }
+.js-replace-jstElements button span { display: none; }
 
-.jstb_strong { background-image: none; }
-.jstb_em { background-image: none; }
-.jstb_ins { background-image: none; }
-.jstb_del { background-image: none; }
-.jstb_code { background-image: none; }
-.jstb_h1 { background-image: none; }
-.jstb_h2 { background-image: none; }
-.jstb_h3 { background-image: none; }
-.jstb_ul { background-image: none; }
-.jstb_ol { background-image: none; }
-.jstb_bq { background-image: none; }
-.jstb_unbq { background-image: none; }
-.jstb_pre { background-image: none; }
-.jstb_link { background-image: none; }
-.jstb_img { background-image: none; }
-.jstb_help { background-image: none; }
+.js-replace-jstElements .help { float: right; font-size: .9em; margin-right: .5em; padding-top: 8px; }
+.js-replace-jstElements .help a { background-image: none; padding: 0; }
+.js-replace-jstElements .help a:before { content: "\f059"; font-family: FontAwesome; color: #3498db; margin-right: .3em; font-size: 1.2em; }
 
 /***** Misc *****/
 

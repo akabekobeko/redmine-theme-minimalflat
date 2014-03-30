@@ -23,6 +23,7 @@ $( document ).ready( function() {
     addBeginIcon( "div.flash.warning, .conflict",       "fa fa-exclamation-triangle js-replace-fa-icon" );
 
     // Editor toolbar
+    $( ".jstElements" ).removeClass( "jstElements" ).addClass( "js-replace-jstElements" );
     addBeginIcon( ".jstb_strong", "fa fa-bold" );
     addBeginIcon( ".jstb_em",     "fa fa-italic" );
     addBeginIcon( ".jstb_ins",    "fa fa-underline" ); 
@@ -42,7 +43,7 @@ $( document ).ready( function() {
 
     // a > img icons
     $( "a[onclick*='removeFileField(this);']" ).addClass( "js-replace-icon-trash" ).empty();
-    $( "a[data-method='delete']" ).addClass( "js-replace-icon-trash" ).empty();
+    $( "a[data-method='delete']" ).addClass( "js-replace-icon-trash" );
     $( "img[src*='toggle_check.png']" ).replaceWith( $( "<i>" ).addClass( "js-replace-icon-check" ) );
     $( "a[href*='edit?section=']" ).addClass( "js-replace-icon-edit" ).empty();
     $( "a[href*='quoted?journal_id=']" ).addClass( "js-replace-icon-comment" ).empty();
