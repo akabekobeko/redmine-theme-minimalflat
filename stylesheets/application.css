@@ -218,6 +218,7 @@ a.atom:before { content: "\f09e"; color: #2980b9; font-family: FontAwesome; marg
 .other-formats .html:before { content: "\f15c"; color: #16a085; font-family: FontAwesome; margin-right: .3em; }
 .other-formats .pdf:before  { content: "\f15c"; color: #c0392b; font-family: FontAwesome; margin-right: .3em; }
 .other-formats .csv:before  { content: "\f15c"; color: #e67e22; font-family: FontAwesome; margin-right: .3em; }
+.other-formats .png:before  { content: "\f03e"; color: #3498db; font-family: FontAwesome; margin-right: .3em; }
 
 em.info.error { background: none; padding: 0; }
 em.info.error:before { content: "\f06a"; color: #e74c3c; font-family: FontAwesome; margin-right: .3em; }
