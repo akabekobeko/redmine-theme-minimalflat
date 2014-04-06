@@ -25,4 +25,5 @@ Minimal and flat design Redmine theme.
 
 # Change log
 
-* 2014/3/30: v1.0.0 release
+* 2014/04/06: v1.0.1 release
+* 2014/03/30: v1.0.0 release

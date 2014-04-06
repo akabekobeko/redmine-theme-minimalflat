@@ -8,11 +8,11 @@
 TARGETDIR=minimalflat
 
 mkdir ${TARGETDIR}
-mkdir ${TARGETDIR}/javascripts
-mkdir ${TARGETDIR}/stylesheets
 
-cp javascripts/theme.js ${TARGETDIR}/javascripts
-cp stylesheets/application.css ${TARGETDIR}//stylesheets
+# Sub directories
+cp -r fonts       ${TARGETDIR}
+cp -r javascripts ${TARGETDIR}
+cp -r stylesheets ${TARGETDIR}
 
 find ${TARGETDIR} -name ".DS_Store" -print -exec rm {} ";"
 zip -r minimalflat-$1.zip ${TARGETDIR}
