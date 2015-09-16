@@ -44,10 +44,20 @@
     // a > img icons
     $( 'a[onclick*="removeFileField(this);"]' ).addClass( 'js-replace-icon-trash' ).empty();
     $( 'a[data-method="delete"]' ).addClass( 'js-replace-icon-trash' );
-    $( 'img[src*="toggle_check.png"]' ).replaceWith( $( '<i>' ).addClass( 'js-replace-icon-check' ) );
     $( 'a[href*="edit?section="]' ).addClass( 'js-replace-icon-edit' ).empty();
     $( 'a[href*="quoted?journal_id="]' ).addClass( 'js-replace-icon-comment' ).empty();
     $( 'a[onclick*="journals/edit"]' ).addClass( 'js-replace-icon-edit' ).empty();
+
+    $( 'img[src*="toggle_check.png"]' ).replaceWith(
+      $( '<i>' )
+      .addClass( 'js-replace-icon-check' )
+      .on( 'click', function() {
+        if( typeof toggleIssuesSelection === 'function' ) {
+          toggleIssuesSelection( $( this ).parent() );
+          return false;
+        }
+      } )
+    );
   } );
 
 } )( window.jQuery );
