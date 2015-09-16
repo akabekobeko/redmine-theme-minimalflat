@@ -2,6 +2,9 @@
 
 Minimal and flat design Redmine theme.
 
+* This project was closed
+* The next version is [akabekobeko/redmine-theme-minimalflat2](https://github.com/akabekobeko/redmine-theme-minimalflat2)
+
 # Feature
 
 * Minimal and flat design
@@ -25,5 +28,6 @@ Minimal and flat design Redmine theme.
 
 # Change log
 
+* 2015/09/16: v1.0.2 release
 * 2014/04/06: v1.0.1 release
 * 2014/03/30: v1.0.0 release
