@@ -2,6 +2,10 @@
 
 minimalflat はミニマルでフラットな Remdine 用テーマです。
 
+* このプロジェクトは開発を停止しています
+* 後継プロジェクトは [akabekobeko/redmine-theme-minimalflat2](https://github.com/akabekobeko/redmine-theme-minimalflat2) になります
+
+
 ## 特徴
 
 * 簡素でフラットなデザイン
@@ -24,5 +28,6 @@ minimalflat はミニマルでフラットな Remdine 用テーマです。
 
 ## 更新履歴
 
+* 2015/09/16: v1.0.2 リリース
 * 2014/04/06: v1.0.1 リリース
 * 2014/03/30: v1.0.0 リリース
